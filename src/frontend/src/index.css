@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    --background: 0.13 0.02 220;
+    --foreground: 0.96 0.005 220;
+    --card: 0.2 0.022 220;
+    --card-foreground: 0.96 0.005 220;
+    --popover: 0.2 0.022 220;
+    --popover-foreground: 0.96 0.005 220;
+    --primary: 0.94 0.008 220;
+    --primary-foreground: 0.15 0.02 220;
+    --secondary: 0.25 0.022 220;
+    --secondary-foreground: 0.96 0.005 220;
+    --muted: 0.22 0.02 220;
+    --muted-foreground: 0.73 0.018 220;
+    --accent: 0.65 0.22 28;
+    --accent-foreground: 0.96 0.005 0;
+    --destructive: 0.58 0.18 22;
+    --destructive-foreground: 0.96 0.005 0;
+    --border: 0.28 0.02 220;
+    --input: 0.17 0.022 220;
+    --ring: 0.65 0.22 28;
+    --success: 0.71 0.18 155;
+    --success-foreground: 0.96 0.005 155;
+    --chart-1: 0.65 0.22 28;
+    --chart-2: 0.71 0.18 155;
+    --chart-3: 0.6 0.15 220;
+    --chart-4: 0.75 0.15 80;
+    --chart-5: 0.65 0.18 290;
+    --sidebar: 0.15 0.02 220;
+    --sidebar-foreground: 0.96 0.005 220;
+    --sidebar-primary: 0.65 0.22 28;
+    --sidebar-primary-foreground: 0.96 0.005 0;
+    --sidebar-accent: 0.22 0.02 220;
+    --sidebar-accent-foreground: 0.96 0.005 220;
+    --sidebar-border: 0.28 0.02 220;
+    --sidebar-ring: 0.65 0.22 28;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+    background: linear-gradient(
+      160deg,
+      oklch(0.12 0.025 220) 0%,
+      oklch(0.14 0.02 210) 100%
+    );
+    min-height: 100vh;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
